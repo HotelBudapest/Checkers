@@ -292,40 +292,42 @@ public class Piece extends App{
     }
 
     public void draw(PApplet app){
-        if (type.equals("Black")){
-            app.fill(255, 255, 255);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size, this.size);
-            app.fill(0, 0, 0);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 15, this.size - 15);
-        }
-       
-        if (type.equals("White")){
-            app.fill(0);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size, this.size);
-            app.fill(255);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 15, this.size - 15);
-        }
-
-        if (type.equals("BK")){
-            app.fill(255, 255, 255);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size, this.size);
-            app.fill(0, 0, 0);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 15, this.size - 15);
-            app.fill(255, 255, 255);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 30, this.size-30);
-            app.fill(0, 0, 0);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 45, this.size - 45);
-        }
-
-        if (type.equals("WK")){
-            app.fill(0);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size, this.size);
-            app.fill(255);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 15, this.size - 15);
-            app.fill(0);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 30, this.size - 30);
-            app.fill(255);
-            app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 45, this.size - 45);
+        if (!isAnimating){
+            if (type.equals("Black")){
+                app.fill(255, 255, 255);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size, this.size);
+                app.fill(0, 0, 0);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 15, this.size - 15);
+            }
+           
+            if (type.equals("White")){
+                app.fill(0);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size, this.size);
+                app.fill(255);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 15, this.size - 15);
+            }
+    
+            if (type.equals("BK")){
+                app.fill(255, 255, 255);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size, this.size);
+                app.fill(0, 0, 0);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 15, this.size - 15);
+                app.fill(255, 255, 255);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 30, this.size-30);
+                app.fill(0, 0, 0);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 45, this.size - 45);
+            }
+    
+            if (type.equals("WK")){
+                app.fill(0);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size, this.size);
+                app.fill(255);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 15, this.size - 15);
+                app.fill(0);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 30, this.size - 30);
+                app.fill(255);
+                app.ellipse((this.x * App.CELLSIZE) +(App.CELLSIZE / 2), (this.y * App.CELLSIZE) + (App.CELLSIZE / 2), this.size - 45, this.size - 45);
+            }
         }
     }
 }
