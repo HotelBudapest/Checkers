@@ -139,6 +139,7 @@ public class App extends PApplet {
                     previousSelected = selectedPiece;
                     prevselectedRow = row;
                     prevselectedCol = col;
+                    System.out.println(previousSelected.type);
                 }
                 else if ((board[row][col] == null) && (previousSelected != null) && (previousSelected.isValidMove(prevselectedRow, prevselectedCol, row, col, this))){
                     println("true");
@@ -196,6 +197,7 @@ public class App extends PApplet {
                 }
                 else {
                     selectedPiece = null;
+                    previousSelected = selectedPiece;
                     selectedRow = -1;
                     selectedCol = -1;
                     println("Empty cell clicked at: " + row + ", " + col);
